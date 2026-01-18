@@ -1,3 +1,5 @@
+Here is your file: https://drive.google.com/file/d/1eQvEf1YiNvpUJeTkftFn_BRNSjHQxSuE/view?usp=sharing
+
 docker load -i kombatguardian.tar
 docker run -p 1337:1337 kombatguardian:latest
 
