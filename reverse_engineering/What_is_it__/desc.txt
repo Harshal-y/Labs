@@ -1,0 +1,6 @@
+An unassuming file hides more than it reveals.
+Its appearance does not reflect its true nature.
+
+Try viewing it the way it was meant to be viewed — what seems invisible may not be gone.
+
+Flag Format: 0CTF{...}

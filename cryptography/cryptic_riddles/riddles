@@ -1,0 +1,27 @@
+use this: https://cryptii.com/pipes/caesar-cipher
+
+
+SHIFT: 7
+ALPHABET: abcdefghijklmnopqrstuvwxyz
+CASE STRATEGY: Maintain case
+FOREIGN CHARS: Include
+
+{d1ua3y_do1zw3yz}MAJ0_0ylglkvu
+{my0za3k_y1kks3z}MAJ0_0ylglkvu
+{q4u_m3iy_z3jy3az}MAJ0_0ylglkvu
+{1jf_s0n1j_s0c3}MAJ0_0ylglkvu
+{o34ya_1u_j1wo3y}MAJ0_0ylglkvu
+{zu0di0buk_3u1nt4}MAJ0_0ylglkvu
+{j0sk_j4z3_jam}MAJ0_0ylglkvu
+{c4s3ua1u3z_e0y}MAJ0_0ylglkvu
+{my0g3u_r3fz_42}MAJ0_0ylglkvu
+{jyfwa1j_jo1ss}MAJ0_0ylglkvu
+{o1kk3u_1u_1j3}MAJ0_0ylglkvu
+{s0c3_s0jr3k_k4a4}MAJ0_0ylglkvu
+{d1ua3y_m0yt4az}MAJ0_0ylglkvu
+{3u1nt4_buk3y_zu0d}MAJ0_0ylglkvu
+{jam_o34yaiy34r}MAJ0_0ylglkvu
+
+remember flag formats are very important
+
+Flag Format: nodezer0_0CTF{...}

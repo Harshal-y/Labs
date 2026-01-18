@@ -1,0 +1,23 @@
+docker load -i kombatguardian.tar
+docker run -p 1337:1337 kombatguardian:latest
+
+For Linux:
+
+sudo apt update
+sudo apt install -y netcat
+nc localhost 1337
+
+For Windows:
+
+Download & install Nmap (includes ncat)
+
+Run in Command Prompt or PowerShell:
+
+For Mac:
+
+brew install netcat
+nc localhost 1337
+
+You must find the name of this chatty chatbot...
+
+Hint: A classic, __________ ninja from the Mortal Kombat series, known as the first secret character in fighting game history...

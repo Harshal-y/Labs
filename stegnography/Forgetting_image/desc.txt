@@ -1,0 +1,15 @@
+ever heard of what to do if you forget your steghide password??
+
+well steghide is used to hide text inside image at encryption and you give a password which unlock the hidden text at extraction or when you decode/decrypt...
+
+maybe u should steg.seek it...
+
+its really easy even chatgpt know it.
+
+format is:
+
+stegseek image wordlist
+
+rockyou is a popular wordlist
+
+now as for how you install stegseek well its a great blessing we have the internet for all sorts of issues... not kidding.

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calendar Invite</title>
+
+<style>
+body {
+    margin: 0;
+    background: #f1f3f4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202124;
+}
+
+.mail {
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+.header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.subject {
+    font-size: 20px;
+}
+
+.meta {
+    font-size: 13px;
+    color: #5f6368;
+    margin-top: 6px;
+}
+
+.body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.attach {
+    margin-top: 24px;
+    padding: 14px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attach button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.attach button:hover {
+    background: #1765cc;
+}
+
+/* POPUP */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 340px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+.popup h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.popup p {
+    font-size: 13px;
+    color: #5f6368;
+}
+
+.popup button {
+    margin-top: 12px;
+    padding: 6px 14px;
+    background: #1a73e8;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="mail">
+    <div class="header">
+        <div class="subject">🎄 New Year Event Pass – Calendar Invite</div>
+        <div class="meta">
+            From: HR Events &lt;events@holiday-corp.com&gt;<br>
+            To: employee@holiday-corp.com<br>
+            Date: Mon, 23 Dec 2025 10:15
+        </div>
+    </div>
+
+    <div class="body">
+        Hi,<br><br>
+        Please find the official calendar invite attached below.<br>
+        <br>
+        Some calendar fields may contain system-generated identifiers (could be <b>base64</b>).
+If anything looks unusual, 
+<br>
+<strong>It is intentionally placed by the admin.</strong>
+        <br>
+        <br>
+
+        <div class="attach">
+            <strong>invite.ics</strong>
+            <button onclick="downloadICS()">Download</button>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <h3>Calendar Invite Downloaded</h3>
+        <p>Please check your downloads and open it using your calendar app.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Holiday Events//Christmas New Year Pass//EN
+
+BEGIN:VEVENT
+UID:evt-flag1-part1@holiday.ctf
+DTSTART:20251224T180000Z
+DTEND:20251224T181000Z
+SUMMARY:flag1_part1
+LOCATION:bm9kZXplcjBfMENURntpbn
+END:VEVENT
+
+BEGIN:VEVENT
+UID:evt-flag1-part2@holiday.ctf
+DTSTART:20251224T181000Z
+DTEND:20251224T182000Z
+SUMMARY:flag1_part2
+LOCATION:YxdDNfbTN0NGQ0dDRfMWNzfQ==
+END:VEVENT
+
+BEGIN:VEVENT
+UID:evt-flag2-part1@holiday.ctf
+DTSTART:20260101T000000Z
+DTEND:20260101T001000Z
+SUMMARY:flag2_part1
+LOCATION:bm9kZXplcjBfMENURntoMzRk
+END:VEVENT
+
+BEGIN:VEVENT
+UID:evt-flag2-part2@holiday.ctf
+DTSTART:20260101T001000Z
+DTEND:20260101T002000Z
+SUMMARY:flag2_part2
+LOCATION:M3JzX24zdjNyX2wxM19lbWx9
+END:VEVENT
+
+END:VCALENDAR`;
+
+function downloadICS() {
+    const blob = new Blob([icsContent], { type: "text/calendar" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "invite.ics";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    setTimeout(() => {
+        document.getElementById("overlay").style.display = "flex";
+    }, 200);
+}
+
+function closePopup() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
